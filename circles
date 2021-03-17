@@ -1,0 +1,54 @@
+float r = 0.1;
+
+void setup() {
+  size(600, 600);
+  background(125, 120, 30); 
+}
+
+
+
+void draw(){
+  
+ 
+  fill(#A07CAF, 50); 
+  noStroke();
+  rect(10, 50, width, height);
+  
+  stroke(random(255),random(255), random(255), 50);
+  strokeWeight(random(50, 2));
+  
+  background(#A07CAF); 
+
+
+     for (int i = 5; i < width; i += 100) {
+
+
+
+       for (int j = 300; j < height; j +=300) {
+
+       
+     
+       rotate(radians(r));
+       ellipse(i, j, 50, 50);
+       fill((#E0AF54), 50);
+       
+
+     }
+     r += 1;
+
+
+     
+   }
+
+
+  
+
+  
+
+if(frameCount ==360){
+    exit();
+  
+}
+  saveFrame("output/image####.jpg");
+
+}
